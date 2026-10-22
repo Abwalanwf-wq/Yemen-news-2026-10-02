@@ -1,5 +1,4 @@
-
-<!doctype html<
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
@@ -15,45 +14,141 @@
 <meta property="og:url" content="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/">
 
 <style>
-:root{--navy:#071a29;--blue:#153d59;--gold:#e5bd42;--paper:#f7f8fa}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--navy);font-family:Arial,Tahoma,sans-serif;line-height:1.9;color:#17232e}
-.wrap{max-width:900px;margin:auto;padding:12px}
-.box{background:var(--paper);border:3px solid var(--gold);border-radius:16px;padding:18px;margin:14px 0;text-align:center;overflow-wrap:anywhere}
-.hero{background:var(--blue);color:#fff}
-.hero h1{color:#f3cb54;margin-top:0}
-.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:10px 16px;border-radius:10px;margin:5px;font-weight:bold}
-.promo{display:block;width:100%;height:auto;border-radius:10px}
-.qr{width:220px;max-width:80%;height:auto;background:#fff;padding:8px;border-radius:8px}
-a{overflow-wrap:anywhere}
-ul{text-align:right;line-height:2.1}
-.ticker{display:flex;align-items:center;background:#071a29;border:2px solid #e5bd42;border-radius:12px;overflow:hidden;margin:12px 0;color:#fff;direction:rtl}
-.ticker-label{flex-shrink:0;background:#b91c1c;color:#fff;font-weight:bold;padding:9px 13px}
-.ticker-window{min-width:0;overflow:hidden;flex:1;padding:8px 0}
-.ticker-track{display:flex;gap:36px;width:max-content;white-space:nowrap;animation:ticker-scroll 30s linear infinite}
-.ticker-track span{
-  font-weight:bold;
-  color:#fff;
-  text-decoration:none;
+:root {
+  --navy: #071a29;
+  --blue: #153d59;
+  --gold: #e5bd42;
+  --paper: #f7f8fa;
 }
-.ticker-track a{
-  color:#fff;
-  text-decoration:none;
-  
-.ticker-track a:hover {
-  color: #e5bd42;
-  text-decoration: none;}
-.ticker-track span:before{content:"◆";color:#e5bd42;margin:0 12px}
-@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(50%)}}
-@media(max-width:600px){.ticker-label{padding:8px;font-size:14px}}
-@media(prefers-reduced-motion:reduce){.ticker-track{animation:none;white-space:normal;flex-wrap:wrap;width:auto}}
-.small{font-size:.92rem;color:#46515b}
-@media(max-width:600px){.wrap{padding:7px}.box{padding:12px}.btn{display:block}}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--navy);
+  font-family: Arial, Tahoma, sans-serif;
+  line-height: 1.9;
+  color: #17232e;
+}
+.wrap { max-width: 900px; margin: auto; padding: 12px; }
+.box {
+  background: var(--paper);
+  border: 3px solid var(--gold);
+  border-radius: 16px;
+  padding: 18px;
+  margin: 14px 0;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.hero { background: var(--blue); color: #fff; }
+.hero h1 { color: #f3cb54; margin-top: 0; }
+.btn {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  margin: 5px;
+  font-weight: bold;
+}
+.promo { display: block; width: 100%; height: auto; border-radius: 10px; }
+.qr {
+  width: 220px;
+  max-width: 80%;
+  height: auto;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+a { overflow-wrap: anywhere; }
+ul { text-align: right; line-height: 2.1; }
+
+/* شريط الأخبار */
+.ticker {
+  display: flex;
+  align-items: stretch;
+  background: var(--navy);
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 12px 0;
+  color: #fff;
+  direction: rtl;
+  min-height: 56px;
+}
+.ticker-label {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #b91c1c;
+  color: #fff;
+  font-weight: bold;
+  padding: 9px 13px;
+  border-left: 2px solid var(--gold);
+  position: relative;
+  z-index: 1;
+}
+.ticker-window {
+  min-width: 0;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+.ticker-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  white-space: nowrap;
+  animation: ticker-scroll 35s linear infinite;
+}
+.ticker-track span {
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  padding: 0 18px;
+}
+/* الفاصل الذهبي بين الأخبار */
+.ticker-track span::after {
+  content: "◆";
+  display: inline-block;
+  color: var(--gold);
+  margin-right: 22px;
+  margin-left: 0;
+  font-size: 0.9em;
+}
+.ticker-track span:last-child::after { content: ""; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(50%); }
+}
+.small { font-size: .92rem; color: #46515b; }
+
+@media (max-width: 600px) {
+  .wrap { padding: 7px; }
+  .box { padding: 12px; }
+  .btn { display: block; }
+  .ticker-label { padding: 8px; font-size: 14px; }
+  .ticker-track span { padding: 0 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+    white-space: normal;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body>
 <main class="wrap" id="top">
+
 <section class="box" style="text-align:center">
   <a href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/" target="_blank" rel="noopener">
     <img src="promo-network-fixed.jpg" alt="الإعلان الموحد للموقع الإلكتروني — شبكة أبو الأنوف الإعلامية" style="width:100%;height:auto;border:2px solid #e5bd42;border-radius:10px">
@@ -62,12 +157,12 @@ ul{text-align:right;line-height:2.1}
 </section>
 
 <header class="box hero">
-<h1>النشرة اليمنية اليومية</h1>
-<strong>الخميس 22 أكتوبر 2026م — العدد الجديد</strong>
-<p>أخبار اليمن والعالم بين يديك</p>
-<p>شبكة أبو الأنوف الإعلامية — الخبر من مصدره… والتحقق قبل النشر</p>
-<a class="btn" href="#thursday-edition">عدد الخميس</a>
-<a class="btn" href="#archive">أرشيف الأعداد</a>
+  <h1>النشرة اليمنية اليومية</h1>
+  <strong>الخميس 22 أكتوبر 2026م — العدد الجديد</strong>
+  <p>أخبار اليمن والعالم بين يديك</p>
+  <p>شبكة أبو الأنوف الإعلامية — الخبر من مصدره… والتحقق قبل النشر</p>
+  <a class="btn" href="#thursday-edition">عدد الخميس</a>
+  <a class="btn" href="#archive">أرشيف الأعداد</a>
 </header>
 
 <section class="ticker" aria-label="شريط الأخبار">
@@ -79,62 +174,65 @@ ul{text-align:right;line-height:2.1}
       <span>قضايا التعليم والمعلمين ومستقبل المدرسة اليمنية</span>
       <span>متابعة الأخبار المحلية والعربية والدولية من مصادرها</span>
       <span>شبكة أبو الأنوف الإعلامية — الخبر من مصدره والتحقق قبل النشر</span>
+      <span>الخميس 22 أكتوبر 2026م — النشرة اليمنية اليومية</span>
+      <span>المعلم اليمني في مهبّ الأزمة — إنصاف المعلم مدخل لإنقاذ التعليم</span>
+      <span>قضايا التعليم والمعلمين ومستقبل المدرسة اليمنية</span>
+      <span>متابعة الأخبار المحلية والعربية والدولية من مصادرها</span>
+      <span>شبكة أبو الأنوف الإعلامية — الخبر من مصدره والتحقق قبل النشر</span>
     </div>
   </div>
 </section>
 
 <section class="box" id="thursday-edition">
-<h2>النشرة اليمنية اليومية — الخميس 22 أكتوبر 2026م</h2>
-<p><strong>يجري استكمال رفع مواد عدد الخميس.</strong></p>
-<p>سيُضاف هنا رابط العدد الإلكتروني وصورته بعد رفع الملفات النهائية والتحقق من عمل الروابط.</p>
-<p class="small">هذه صفحة تمهيدية للعدد الجديد؛ لا تمثل صورة العدد أو صفحته الإلكترونية النهائية.</p>
+  <h2>النشرة اليمنية اليومية — الخميس 22 أكتوبر 2026م</h2>
+  <p><strong>يجري استكمال رفع مواد عدد الخميس.</strong></p>
+  <p>سيُضاف هنا رابط العدد الإلكتروني وصورته بعد رفع الملفات النهائية والتحقق من عمل الروابط.</p>
+  <p class="small">هذه صفحة تمهيدية للعدد الجديد؛ لا تمثل صورة العدد أو صفحته الإلكترونية النهائية.</p>
 </section>
 
 <section class="box">
-<h2>الرابط العام الموحد للموقع</h2>
-<p><a href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/">https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/</a></p>
-<a class="btn" href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/">فتح الموقع العام</a>
+  <h2>الرابط العام الموحد للموقع</h2>
+  <p><a href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/">https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/</a></p>
+  <a class="btn" href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/">فتح الموقع العام</a>
 </section>
 
 <section class="box" id="share">
-<h2>روابط النشرة ورموز QR</h2>
+  <h2>روابط النشرة ورموز QR</h2>
+  <h3>رمز QR العام للموقع</h3>
+  <p>يمسح هذا الرمز لفتح الصفحة الرئيسية الموحدة للموقع.</p>
+  <a href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/" aria-label="فتح الموقع العام">
+    <img class="qr" src="qr-site.png" alt="رمز QR للرابط العام للموقع">
+  </a>
+  <p><a href="qr-site.png" download="qr-site.png">حفظ رمز QR العام</a></p>
 
-<h3>رمز QR العام للموقع</h3>
-<p>يمسح هذا الرمز لفتح الصفحة الرئيسية الموحدة للموقع.</p>
-<a href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/" aria-label="فتح الموقع العام">
-<img class="qr" src="qr-site.png" alt="رمز QR للرابط العام للموقع">
-</a>
-<p><a href="qr-site.png" download="qr-site.png">حفظ رمز QR العام</a></p>
-
-<h3>ما وراء الخبر — العدد السابق</h3>
-<p>رابط ركن التحليل المحفوظ في عدد الأحد السابق.</p>
-<a class="btn" href="edition-2026-10-18.html#analysis">فتح ما وراء الخبر — عدد الأحد 18 أكتوبر</a>
-<p><a href="qr-ma-waraa-alkhabar-2026-10-18.png" download="qr-ma-waraa-alkhabar-2026-10-18.png">حفظ رمز QR لما وراء الخبر — العدد السابق</a></p>
-
-<p class="small">سيُضاف رابط ورمز QR الخاصان بعدد الخميس بعد تجهيز صفحة التحليل الجديدة.</p>
+  <h3>ما وراء الخبر — العدد السابق</h3>
+  <p>رابط ركن التحليل المحفوظ في عدد الأحد السابق.</p>
+  <a class="btn" href="edition-2026-10-18.html#analysis">فتح ما وراء الخبر — عدد الأحد 18 أكتوبر</a>
+  <p><a href="qr-ma-waraa-alkhabar-2026-10-18.png" download="qr-ma-waraa-alkhabar-2026-10-18.png">حفظ رمز QR لما وراء الخبر — العدد السابق</a></p>
+  <p class="small">سيُضاف رابط ورمز QR الخاصان بعدد الخميس بعد تجهيز صفحة التحليل الجديدة.</p>
 </section>
 
 <section class="box" id="archive">
-<h2>أرشيف الأعداد</h2>
-<p>اختر العدد الذي تريد قراءته:</p>
-<ul>
-<li><a href="newsletter-2026-10-19.jpg">النشرة اليمنية اليومية — الاثنين 19 أكتوبر 2026م (صورة العدد 20)</a></li>
-<li><a href="edition-2026-10-18.html">النشرة اليمنية اليومية — الأحد 18 أكتوبر 2026م</a></li>
-<li><a href="edition-2026-10-17-reviewed.html">النشرة اليمنية اليومية — السبت 17 أكتوبر 2026م</a></li>
-<li><a href="edition-2026-10-16.html">النشرة اليمنية اليومية — الجمعة 16 أكتوبر 2026م</a></li>
-<li><a href="poster-2026-10-15.jpg">صورة عدد الخميس 15 أكتوبر 2026م</a></li>
-<li><a href="index-fixed-2026-10-14-share-4.html">النشرة اليمنية اليومية — الأربعاء 14 أكتوبر 2026م</a></li>
-<li><a href="edition-2026-10-13.html">النشرة اليمنية اليومية — الثلاثاء 13 أكتوبر 2026م</a></li>
-<li><a href="edition-2026-10-12.html">النشرة اليمنية اليومية — الاثنين 12 أكتوبر 2026م</a></li>
-<li><a href="2026-10-10-taiz.html">تعز: آخر التطورات الميدانية والبيانات المتاحة — 10 أكتوبر 2026م</a></li>
-</ul>
-<a class="btn" href="./index.html#top">العودة إلى أعلى الصفحة</a>
+  <h2>أرشيف الأعداد</h2>
+  <p>اختر العدد الذي تريد قراءته:</p>
+  <ul>
+    <li><a href="newsletter-2026-10-19.jpg">النشرة اليمنية اليومية — الاثنين 19 أكتوبر 2026م (صورة العدد 20)</a></li>
+    <li><a href="edition-2026-10-18.html">النشرة اليمنية اليومية — الأحد 18 أكتوبر 2026م</a></li>
+    <li><a href="edition-2026-10-17-reviewed.html">النشرة اليمنية اليومية — السبت 17 أكتوبر 2026م</a></li>
+    <li><a href="edition-2026-10-16.html">النشرة اليمنية اليومية — الجمعة 16 أكتوبر 2026م</a></li>
+    <li><a href="poster-2026-10-15.jpg">صورة عدد الخميس 15 أكتوبر 2026م</a></li>
+    <li><a href="index-fixed-2026-10-14-share-4.html">النشرة اليمنية اليومية — الأربعاء 14 أكتوبر 2026م</a></li>
+    <li><a href="edition-2026-10-13.html">النشرة اليمنية اليومية — الثلاثاء 13 أكتوبر 2026م</a></li>
+    <li><a href="edition-2026-10-12.html">النشرة اليمنية اليومية — الاثنين 12 أكتوبر 2026م</a></li>
+    <li><a href="2026-10-10-taiz.html">تعز: آخر التطورات الميدانية والبيانات المتاحة — 10 أكتوبر 2026م</a></li>
+  </ul>
+  <a class="btn" href="./index.html#top">العودة إلى أعلى الصفحة</a>
 </section>
 
 <section class="box">
-<h2>فهرسة الموقع في Google</h2>
-<p>خريطة الموقع:</p>
-<p><a href="sitemap.xml">فتح sitemap.xml</a></p>
+  <h2>فهرسة الموقع في Google</h2>
+  <p>خريطة الموقع:</p>
+  <p><a href="sitemap.xml">فتح sitemap.xml</a></p>
 </section>
 
 <section class="box" style="text-align:center">
@@ -145,8 +243,8 @@ ul{text-align:right;line-height:2.1}
 </section>
 
 <footer class="box">
-شبكة أبو الأنوف الإعلامية<br>
-إعداد وتحرير: عبده سالم الفقيه
+  شبكة أبو الأنوف الإعلامية<br>
+  إعداد وتحرير: عبده سالم الفقيه
 </footer>
 
 </main>
