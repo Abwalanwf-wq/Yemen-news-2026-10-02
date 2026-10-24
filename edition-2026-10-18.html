@@ -45,7 +45,7 @@ body{margin:0;background:var(--navy);color:var(--ink);font-family:Arial,Tahoma,s
 <p><b>شبكة أبو الأنوف الإعلامية</b><br/>الخبر من مصدره… والتحقق قبل النشر</p>
 <p>إعداد وتحرير: عبده سالم الفقيه</p>
 </header>
-<section aria-label="إعلان النشرة في بداية الصفحة" class="promo-banner"><a href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/" rel="noopener" target="_blank"><img alt="إعلان شبكة أبو الأنوف الإعلامية — بداية النشرة" loading="eager" src="promo-main-general-link-fixed.png"/></a></section>
+<section aria-label="إعلان النشرة في بداية الصفحة" class="promo-banner"><a href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/" rel="noopener" target="_blank"><img alt="إعلان شبكة أبو الأنوف الإعلامية — بداية النشرة" loading="eager" src="promo-main-no-date.jpg"/></a></section>
 <section class="card contents" id="contents">
 <h2>فهرس النشرة والتنقل</h2>
 <a class="btn" href="#edition-image">النسخة المصوّرة</a>
@@ -57,7 +57,6 @@ body{margin:0;background:var(--navy);color:var(--ink);font-family:Arial,Tahoma,s
 <a class="btn" href="#frontline-update">تطورات الجبهات</a>
 <a class="btn" href="#taiz-civilian-update">ضحايا مدنيون في تعز</a>
 <a class="btn" href="#humanitarian-update">تقرير المساعدات الإنسانية</a>
-
 <a class="btn" href="#analysis">ما وراء الخبر</a>
 <a class="btn" href="#archive">أرشيف الأعداد</a>
 <a class="btn" href="#share">رمز QR والمشاركة</a>
@@ -100,7 +99,6 @@ body{margin:0;background:var(--navy);color:var(--ink);font-family:Arial,Tahoma,s
 <p><b>الخلاصة:</b> المعيار الأهم خلال الأيام المقبلة هو ما إذا كانت الإجراءات المعلنة ستتحول إلى حماية ملموسة للمدنيين، واستمرار الخدمات، ووصول آمن للمساعدات. وكلما طال تعطّل الطرق، ارتفعت الكلفة الإنسانية وأصبحت الاستجابة العاجلة ضرورة لا تحتمل التأجيل.</p>
 <p class="notice"><b>منهجية التحرير:</b> الوقائع أعلاه مستندة إلى تقارير منشورة؛ أما تفسير الدلالات فهو تحليل تحريري ولا يُقدّم بوصفه معلومة مستقلة مؤكدة.</p></article>
 <section class="card" id="analysis-qr" style="text-align:center;border:3px solid var(--gold)"><h2>ما وراء الخبر</h2><p>افتح ركن التحليل مباشرة من الرابط التالي:</p><a class="btn" href="#analysis">فتح ركن ما وراء الخبر</a></section>
-
 <section class="card" id="archive">
 <h2>أرشيف الأعداد</h2>
 <p>روابط الأرشيف أدناه نسبية إلى جذر الموقع، حتى تعمل على GitHub Pages دون الحاجة إلى اسم نطاق إضافي.</p>
@@ -144,7 +142,7 @@ body{margin:0;background:var(--navy);color:var(--ink);font-family:Arial,Tahoma,s
   const status = document.getElementById('share-status');
   const setStatus = message => { if (status) status.textContent = message; };
   const shareLinks = {
-    'share-whatsapp': 'https://wa.me/?text=' + encodeURIComponent(text + '\n' + url),
+    'share-whatsapp': 'https://wa.me/?text=' + encodeURIComponent(text + '\\n' + url),
     'share-facebook': 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
     'share-x': 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(title),
     'share-telegram': 'https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(title)
@@ -194,5 +192,5 @@ body{margin:0;background:var(--navy);color:var(--ink);font-family:Arial,Tahoma,s
 <p>إعداد وتحرير: عبده سالم الفقيه</p>
 <p><a href="#top" style="color:#f3cb54">العودة إلى أعلى الصفحة ↑</a></p>
 </footer>
-<section aria-label="إعلان النشرة في نهاية الصفحة" class="promo-banner"><a href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/" rel="noopener" target="_blank"><img alt="إعلان شبكة أبو الأنوف الإعلامية — نهاية النشرة" loading="lazy" src="promo-main-general-link-fixed.png"/></a></section>
+<section aria-label="إعلان النشرة في نهاية الصفحة" class="promo-banner"><a href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/" rel="noopener" target="_blank"><img alt="إعلان شبكة أبو الأنوف الإعلامية — نهاية النشرة" loading="lazy" src="promo-main-no-date.jpg"/></a></section>
 </main></body></html>
