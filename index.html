@@ -51,23 +51,17 @@ h3{color:var(--blue)}
 .ticker-label{font-size:.85rem;padding:7px}
 .ticker-group{gap:18px}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track{animation:none}}
 </style>
-
 </head>
-
 <body>
 <main class="wrap" id="top">
-
 <header class="hero">
-  <img class="brand-logo" src="./logo.png" alt="شعار شبكة أبو الأنوف الإعلامية"
-       onerror="this.onerror=null;this.src='./logo-network.png';">
-
+  <img class="brand-logo" src="./logo.png" alt="شعار شبكة أبو الأنوف الإعلامية" onerror="this.onerror=null;this.src='./logo-network.png';">
   <h1>شبكة أبو الأنوف الإعلامية</h1>
   <h2>النشرة اليمنية اليومية</h2>
   <p><strong>صوت الوعي والمسؤولية — وعي يصنع الفرق</strong></p>
   <p>الخبر من مصدره… والتحقق قبل النشر</p>
-
   <nav aria-label="روابط سريعة">
     <a class="btn" href="#pictured-edition">الصحيفة المصورة</a>
     <a class="btn" href="#electronic-newsletter">النشرة الإلكترونية</a>
@@ -79,26 +73,24 @@ h3{color:var(--blue)}
 
 <section class="ticker" aria-label="شريط الأخبار">
   <div class="ticker-label">آخر المستجدات</div>
-  <div class="ticker-window">
-    <div class="ticker-track">
-      <div class="ticker-group">
-        <a href="#pictured-edition">الصحيفة المصورة — عدد الأحد 25 أكتوبر</a>
-        <a href="#electronic-newsletter">النشرة الإلكترونية اليومية — 25 أكتوبر</a>
-        <a href="#newspaper-sections">الأخبار والتقارير والتحليلات</a>
-        <a href="education.html">الملف التعليمي وحقوق المعلمين</a>
-        <a href="analysis.html">ما وراء الخبر — قراءة وتحليل</a>
-        <a href="archive.html">أرشيف النشرات اليومية</a>
-      </div>
-      <div class="ticker-group" aria-hidden="true">
-        <a href="#pictured-edition" tabindex="-1">الصحيفة المصورة — عدد الأحد 25 أكتوبر</a>
-        <a href="#electronic-newsletter" tabindex="-1">النشرة الإلكترونية اليومية — 25 أكتوبر</a>
-        <a href="#newspaper-sections" tabindex="-1">الأخبار والتقارير والتحليلات</a>
-        <a href="education.html" tabindex="-1">الملف التعليمي وحقوق المعلمين</a>
-        <a href="analysis.html" tabindex="-1">ما وراء الخبر — قراءة وتحليل</a>
-        <a href="archive.html" tabindex="-1">أرشيف النشرات اليومية</a>
-      </div>
+  <div class="ticker-window"><div class="ticker-track">
+    <div class="ticker-group">
+      <a href="./newspaper.html">الصحيفة المصورة — العدد 26، الأحد 25 أكتوبر</a>
+      <a href="./edition-2026-10-25.html">النشرة الإلكترونية اليومية — 25 أكتوبر</a>
+      <a href="#newspaper-sections">الأخبار والتقارير والتحليلات</a>
+      <a href="education.html">الملف التعليمي وحقوق المعلمين</a>
+      <a href="analysis.html">ما وراء الخبر — قراءة وتحليل</a>
+      <a href="archive.html">أرشيف النشرات اليومية</a>
     </div>
-  </div>
+    <div class="ticker-group" aria-hidden="true">
+      <a href="./newspaper.html" tabindex="-1">الصحيفة المصورة — العدد 26، الأحد 25 أكتوبر</a>
+      <a href="./edition-2026-10-25.html" tabindex="-1">النشرة الإلكترونية اليومية — 25 أكتوبر</a>
+      <a href="#newspaper-sections" tabindex="-1">الأخبار والتقارير والتحليلات</a>
+      <a href="education.html" tabindex="-1">الملف التعليمي وحقوق المعلمين</a>
+      <a href="analysis.html" tabindex="-1">ما وراء الخبر — قراءة وتحليل</a>
+      <a href="archive.html" tabindex="-1">أرشيف النشرات اليومية</a>
+    </div>
+  </div></div>
 </section>
 
 <nav aria-label="التنقل الرئيسي">
@@ -116,43 +108,12 @@ h3{color:var(--blue)}
 <section class="card" id="newspaper-sections">
   <h2>أقسام الصحيفة الإلكترونية</h2>
   <div class="grid">
-
-<article class="card">
-  <h2>السياسة</h2>
-  <p>الأخبار والمواقف والتطورات السياسية.</p>
-  <a class="btn" href="politics.html">دخول القسم</a>
-</article>
-
-<article class="card">
-  <h2>الميدان</h2>
-  <p>متابعة التطورات الميدانية من مصادرها.</p>
-  <a class="btn" href="field.html">دخول القسم</a>
-</article>
-
-<article class="card">
-  <h2>الحقوق والتعليم</h2>
-  <p>قضايا الحقوق والمعلمين والطلاب.</p>
-  <a class="btn" href="rights-education.html">دخول القسم</a>
-</article>
-
-<article class="card">
-  <h2>الملف التعليمي</h2>
-  <p>المدارس والسياسات التعليمية وحقوق المعلمين.</p>
-  <a class="btn" href="education.html">دخول القسم</a>
-</article>
-
-<article class="card">
-  <h2>ما وراء الخبر</h2>
-  <p>قراءة تحليلية تميّز بين الوقائع والاستنتاجات.</p>
-  <a class="btn" href="analysis.html">قراءة التحليلات</a>
-</article>
-
-<article class="card">
-  <h2>التقارير والتحقيقات</h2>
-  <p>ملفات معمقة وحوارات ومواد صحفية خاصة.</p>
-  <a class="btn" href="reports.html">دخول القسم</a>
-</article>
-
+    <article class="card"><h2>السياسة</h2><p>الأخبار والمواقف والتطورات السياسية.</p><a class="btn" href="politics.html">دخول القسم</a></article>
+    <article class="card"><h2>الميدان</h2><p>متابعة التطورات الميدانية من مصادرها.</p><a class="btn" href="field.html">دخول القسم</a></article>
+    <article class="card"><h2>الحقوق والتعليم</h2><p>قضايا الحقوق والمعلمين والطلاب.</p><a class="btn" href="rights-education.html">دخول القسم</a></article>
+    <article class="card"><h2>الملف التعليمي</h2><p>المدارس والسياسات التعليمية وحقوق المعلمين.</p><a class="btn" href="education.html">دخول القسم</a></article>
+    <article class="card"><h2>ما وراء الخبر</h2><p>قراءة تحليلية تميّز بين الوقائع والاستنتاجات.</p><a class="btn" href="analysis.html">قراءة التحليلات</a></article>
+    <article class="card"><h2>التقارير والتحقيقات</h2><p>ملفات معمقة وحوارات ومواد صحفية خاصة.</p><a class="btn" href="reports.html">دخول القسم</a></article>
   </div>
 </section>
 
@@ -160,58 +121,48 @@ h3{color:var(--blue)}
   <h2>الصحيفة اليمنية المصورة</h2>
   <p>العدد (26) — الأحد 25 أكتوبر 2026م.</p>
 
-  <a class="image-link" href="./newspaper-2026-10-25.png" target="_blank" rel="noopener">
-    <img class="newspaper-preview"
-         src="./newspaper-2026-10-25.png"
-         alt="الصحيفة اليمنية المصورة — العدد 26، الأحد 25 أكتوبر 2026م"
-         loading="lazy">
+  <!-- مفتاح الصورة مستقل: يفتح ملف الصورة الكامل فقط -->
+  <a class="image-link" href="./newspaper-2026-10-25.png" target="_blank" rel="noopener" aria-label="فتح صورة العدد 26 بالحجم الكامل">
+    <img class="newspaper-preview" src="./newspaper-2026-10-25.png" alt="الصحيفة اليمنية المصورة — العدد 26، الأحد 25 أكتوبر 2026م" loading="lazy">
   </a>
 
   <p style="text-align:center">
-    <a class="btn" href="./newspaper-2026-10-25.png" target="_blank" rel="noopener">عرض الصحيفة المصورة كاملة</a>
-    <a class="btn" href="./newspaper-2026-10-25.png" download>حفظ صورة الصحيفة</a>
+    <!-- هذا المفتاح يفتح صورة العدد وحدها بالحجم الكامل -->
+    <a class="btn" href="./newspaper-2026-10-25.png" target="_blank" rel="noopener">فتح صورة العدد 26 بالحجم الكامل</a>
+    <!-- مفتاح حفظ الصورة لا يتغير -->
+    <a class="btn" href="./newspaper-2026-10-25.png" download>حفظ صورة العدد 26</a>
   </p>
 
-  <p class="small">الصورة الرسمية للعدد 26. إذا لم تظهر، تحقق من وجود الملف newspaper-2026-10-25.png بجوار index.html في المستودع.</p>
+  <p class="small">الصورة مستقلة وتفتح وحدها بالحجم الكامل. زر «فتح الصحيفة المصوّرة كاملة» يفتح صفحة الصحيفة المستقلة، وليس الصورة.</p>
+  <div style="text-align:center;margin:16px auto">
+    <h3>رمز QR لفتح صورة العدد 26 مباشرة</h3>
+    <a href="./qr-image-issue-26.png" target="_blank" rel="noopener"><img src="./qr-image-issue-26.png" alt="رمز QR لفتح صورة العدد 26 بالحجم الكامل" style="width:170px;max-width:60%;height:auto;background:#fff;padding:8px;border:1px solid #ccd5df;border-radius:8px"></a>
+    <p><a class="btn" href="./qr-image-issue-26.png" download>حفظ رمز QR لصورة العدد 26</a></p>
+  </div>
 
-  <p>
-    <a class="btn" href="./newspaper-2026-10-25.png" target="_blank" rel="noopener">فتح صورة الصحيفة مباشرة</a>
-  </p>
+  <!-- هذا المفتاح في الموضع السفلي يفتح صفحة الصحيفة المصوّرة كاملة -->
+  <p style="text-align:center"><a class="btn" href="./newspaper.html">فتح الصحيفة المصوّرة كاملة</a></p>
 
   <h3>الإعلان الترويجي للشبكة</h3>
   <a href="./promo-network-fixed.jpg" target="_blank" rel="noopener">
-    <img class="promo" src="./promo-network-fixed.jpg"
-         alt="الإعلان الترويجي لشبكة أبو الأنوف الإعلامية"
-         loading="lazy"
-         onerror="this.onerror=null;this.alt='تعذر تحميل الإعلان: تحقق من وجود promo-network-fixed.jpg بجوار index.html';">
+    <img class="promo" src="./promo-network-fixed.jpg" alt="الإعلان الترويجي لشبكة أبو الأنوف الإعلامية" loading="lazy" onerror="this.onerror=null;this.alt='تعذر تحميل الإعلان: تحقق من وجود promo-network-fixed.jpg بجوار index.html';">
   </a>
-
   <p><a class="btn" href="./promo-network-fixed.jpg" download>حفظ الإعلان الترويجي</a></p>
 </section>
 
 <section class="card" id="electronic-newsletter">
   <h2>النشرة الإلكترونية اليومية</h2>
   <p>اقرأ نشرة الأحد 25 أكتوبر 2026م، أو انتقل إلى الأرشيف للاطلاع على الأعداد السابقة.</p>
-
-  <p>
-    <a class="btn" href="./edition-2026-10-25.html">قراءة النشرة الإلكترونية — الأحد 25 أكتوبر</a>
-  </p>
-
-  <p>
-    <a class="btn" href="./archive.html">استعراض أرشيف الأعداد</a>
-  </p>
+  <p><a class="btn" href="./edition-2026-10-25.html">قراءة النشرة الإلكترونية — الأحد 25 أكتوبر</a></p>
+  <p><a class="btn" href="./archive.html">استعراض أرشيف الأعداد</a></p>
 </section>
 
 <section class="card" id="share">
   <h2>مشاركة الموقع</h2>
   <p><a href="https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/">https://abwalanwf-wq.github.io/Yemen-news-2026-10-02/</a></p>
-
-<a class="btn" href="https://wa.me/?text=https%3A%2F%2Fabwalanwf-wq.github.io%2FYemen-news-2026-10-02%2F" target="_blank" rel="noopener">مشاركة عبر واتساب</a>
-
+  <a class="btn" href="https://wa.me/?text=https%3A%2F%2Fabwalanwf-wq.github.io%2FYemen-news-2026-10-02%2F" target="_blank" rel="noopener">مشاركة عبر واتساب</a>
   <h3>رمز QR العام للموقع</h3>
-  <a href="./qr-site.png" target="_blank" rel="noopener">
-    <img class="qr" src="./qr-site.png" alt="رمز QR للرابط العام للموقع" loading="lazy">
-  </a>
+  <a href="./qr-site.png" target="_blank" rel="noopener"><img class="qr" src="./qr-site.png" alt="رمز QR للرابط العام للموقع" loading="lazy"></a>
   <p style="text-align:center"><a href="./qr-site.png" download>حفظ رمز QR العام</a></p>
 </section>
 
@@ -224,9 +175,7 @@ h3{color:var(--blue)}
     <li><a href="./edition-2026-10-18.html">الأحد 18 أكتوبر 2026م</a></li>
     <li><a href="./edition-2026-10-16.html">الجمعة 16 أكتوبر 2026م</a></li>
   </ul>
-
-<a class="btn" href="./archive.html">فتح صفحة الأرشيف</a>
-
+  <a class="btn" href="./archive.html">فتح صفحة الأرشيف</a>
 </section>
 
 <footer style="background:var(--navy);color:white;text-align:center">
@@ -235,7 +184,6 @@ h3{color:var(--blue)}
   إعداد وتحرير: عبده سالم الفقيه<br>
   <a href="#top" style="color:#fff">العودة إلى أعلى الصفحة</a>
 </footer>
-
 </main>
 </body>
 </html>
